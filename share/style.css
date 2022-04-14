@@ -1,0 +1,115 @@
+.mg-btm {
+  margin-bottom: 50px;
+}
+
+.chart-box {
+  width: 250px;
+  height: 200px;
+}
+
+.table-margin {
+  margin-top: 10px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.sensor-status {
+  float: left;
+  margin-right: 5%;
+  width: 20%;
+}
+
+.sensor-status {
+  text-align: center;
+}
+
+.status-warning {
+  border-radius: 5px;
+  background: #F5D865;
+  padding-left: 15px;
+}
+
+.status-ok {
+  border-radius: 5px;
+  background: #91D0A8;
+  padding-left: 15px;
+}
+
+.state-warning {
+  margin: 1px;
+  background: #F5D865;
+}
+
+.state-ok {
+  margin: 1px;
+  background: #F5D865;
+}
+
+.about-sensor {
+  margin-top: 30px;
+  height: 300px;
+}
+
+.pie-chart {
+  float: left;
+  width: 20%;
+  height: 270px;
+}
+
+.history {
+  float: left;
+  margin-left: 5%;
+  width: 35%;
+  height: 270px;
+  overflow-y: scroll;
+}
+
+.description {
+  float: left;
+  margin-left: 5%;
+  width: 25%;
+  height: 270px;
+}
+
+.tab {
+  overflow: hidden;
+}
+
+ .tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  border-top: none;
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.footer {
+    min-height: 100px;
+}
+
+a {
+  color: black;
+}
