@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- <script type="text/javascript" src="share/Chart.min.js"></script> -->
+    <script type="text/javascript" src="./share/chart.js"></script>
+    <script type="text/javascript" src="./share/data_plot.js"></script>
+
+    <script src="./share/jquery.min.js"></script>
+    <script src="./share/bootstrap.bundle.min.js"></script>
+    <script src="./share/bootstrap.min.js"></script>
+    <script src="./share/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="./share/bootstrap.min.css">
+    <link rel="stylesheet" href="./share/style.css">
+    <link rel="stylesheet" href="./share/font-awesome.min.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <div class="table-margin">
+      <div class="header">
+        <div class="tab nav nav-tabs">
+          <button class="tablinks nav-link active" onclick="open_history(event, 'sensors')">Sensors</button>
+          <button class="tablinks nav-link" onclick="open_history(event, 'configuration')">Configuration</button>
+          <button class="tablinks nav-link"><a href="configuration.html">Test</a> </button>
+        </div>
+      </div>
+
+      <div id="sensors" class="tabcontent active" style="display: block">
+
+        <div class="card">
+          <div class="card-header warning">
+            <div class="state-ok">
+              <div class="sensor-status">Door sensor C304</div>
+              <div class="sensor-status">OK</div>
+              <div class="sensor-status">54 kWh</div>
+              <div class="sensor-status">22-03-2022 14:58:31</div>
+            </div>
+          </div>
+          <div class="card-body" style="float:left">
+            <a class="btn btn-info dropdown-toggle" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" onclick="load_sensor('door')">Sensor information</a>
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+              <div class="about-sensor">
+                <div class="pie-chart">
+                  <canvas class="pie-chart" id="door_pie_chart">
+                  </canvas>
+                </div>
+                <div class="history">
+                  <div class="tab nav nav-tabs">
+                    <button class="tablinks nav-link active" onclick="open_history(event, 'door_history')">History</button>
+                    <button class="tablinks nav-link" onclick="open_history(event, 'door_warnings')">Warnings</button>
+                  </div>
+                  <div id="door_history" class="tabcontent active" style="display: block">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th><th scope="col">State</th><th scope="col">Value</th><th scope="col">Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><th scope="row">1</th><td>Okey</td><td>54 kWh</td><td>11-11-2022 14:55:30</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div id="door_warnings" class="tabcontent">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr><th scope="col">#</th><th scope="col">State</th><th scope="col">Value</th><th scope="col">Date</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr><th scope="row">1</th><td>Warning</td><td>54 kWh</td><td>11-11-2022 14:55:30</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="description">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">Evaluation method: Polynomial regresion</li>
+                    <li class="list-group-item">Learning interval: 14 days</li>
+                    <li class="list-group-item">State: active</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+           </div>
+          </div>
+          </br>
+        </div>
+
+        <div id="configuration" class="tabcontent">
+          seconds
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
